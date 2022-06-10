@@ -33,9 +33,9 @@ public class HelloWorld {
         System.out.println(++xy);
         System.out.println(xy);
 
-        String theNumberThree = "three";
-        Object o = theNumberThree;
-        int three = (int) o;
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o;
 
         int z = 4;
         z +=5;
