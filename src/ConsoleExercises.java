@@ -5,6 +5,7 @@ public class ConsoleExercises {
 
 
         double pi = 3.14159;
+        System.out.format("This value of pie is: %.2f%n",pi);
 
         Scanner scanner = new Scanner(System.in);
 // Asking for number.
