@@ -5,13 +5,14 @@ public class ControlFlowExercises {
 //while
 //        int i = 5;
 //        while (i < 15) {
-//            i++;
+//
 //            System.out.println(i);
+//        i++;
 //        }
         //do while loops
         int a = 0;
         int b = 100;
-        int c = 2;
+        long c = 2;
 //        do {
 //            System.out.println(a);
 //            a += 2;
@@ -22,7 +23,7 @@ public class ControlFlowExercises {
 //        }while (b>= -10);
 //        do{
 //            System.out.println(c);
-//            c *=2;
+//            c *= c ;
 //        }while(c <= 100000000);
 
 // for loops
@@ -66,8 +67,19 @@ public class ControlFlowExercises {
           }
           System.out.println();
       }
-        System.out.println("Please enter a while number");
-        int first =Integer.parseInt(scanner.next());
+      boolean decision=true;
+      while(decision) {
+          System.out.println("Please enter a whole number");
+          int first = Integer.parseInt(scanner.next());
+          System.out.println("This is your number: " + first);
+          System.out.println(first * first + ": this is your number squared");
+          System.out.println(first * first * first + ": this is your number cubed");
+      }
+        System.out.println("Do you want to continue another number? (Yes/No)");
+      String choice=scanner.next();
+      if(choice.equalsIgnoreCase("no")){
+          decision=false;
+      }
         }
         }
 
