@@ -1,4 +1,7 @@
+package Pi;
+
 public class player {
+    String name;
     int health;
     int minDamage;
     int maxDamage;

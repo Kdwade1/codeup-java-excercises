@@ -1,6 +1,7 @@
+package Pi;
+
 import java.util.Random;
 import java.util.Scanner;
-import Pi.enemies;
 
 public class consoleAdventureGame {
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ int minAttack = 10;
 
 
 
-        //player variables
+        //Pi.player variables
         int health=100;
         int dps= 50;
         int numberOfPotions=3;
@@ -117,4 +118,32 @@ if(health<1){
 
     }
 
+    public static class person {
+        public String name;
+        public int age;
+        public String occupation;
+
+
+        public String sayHello() {
+            return String.format("Hello, my name is %s, and i'm %d years old. I toil away as a %s. Its a living!", name, age, occupation);
+        }
+
+        public static void main(String[] args) {
+            person ron = new person("ron",42,"truck driver");
+            ron.name = "Ron";
+            ron.age= 42;
+            ron.occupation ="truck driver";
+            System.out.println(ron.sayHello());
+        }
+        public person(String name, int age, String occupation){
+            this.name=name;
+            this.age=age;
+            this.occupation=occupation;
+
+        }
+        public String getName()  {
+            return name;
+        }
+
+    }
 }

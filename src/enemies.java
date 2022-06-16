@@ -1,4 +1,5 @@
 public class enemies {
+    String name;
     int Health;
     int minDamage;
     int maxDamage;
