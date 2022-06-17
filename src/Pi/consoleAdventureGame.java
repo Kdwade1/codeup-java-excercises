@@ -10,6 +10,7 @@ public class consoleAdventureGame {
     static player archer;
 
 
+
 //    public player[] builds = {warrior,tank,archer};
 
     //    private static player[] builds;
@@ -17,9 +18,11 @@ public class consoleAdventureGame {
 ////        return player.bu;
 //    }
     public static void main(String[] args) {
-//        static player warrior = new player();
-//        static player tank = new player();
-//        static player archer = new player();
+//        static player warrior = new player("The Warrior",150,25,60,10,40,50,3,40);
+//        static player tank = new player("The Tank",200,10,40,5,10,20,2,60);
+//        static player archer = new player("The Archer",125,10,35,15,);
+
+        enemy zombie= new enemy("Zombie",50,5,20,10,5,30,50,10,30,10);
 
         /////system object
         Scanner in=new Scanner(System.in);

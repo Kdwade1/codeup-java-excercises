@@ -23,6 +23,8 @@ String name;
          this.maxSpeed=maxSpeed;
          this.minSpeed=minSpeed;
          this.randomChanceRate=randomChanceRate;
+         this.potionDropRate= potionDropRate;
+         this.missChances= missChances;
 
             }
     public static void main(String[] args) {
