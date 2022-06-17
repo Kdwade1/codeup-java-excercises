@@ -26,68 +26,19 @@ String name;
 
             }
     public static void main(String[] args) {
+        // Room one Enemies stats
+enemy zombie= new enemy("Zombie",50,5,20,10,5,30,50,10,30,10);
 
-////
-////            enemy zombie = new enemy();
-////            zombie.Health = 50;
-////            zombie.minDps = 5;
-////            zombie.maxDps = 20;
-////            zombie.exp = 30;
-////            zombie.maxSpeed = 10;
-////            zombie.minSpeed = 5;
-////            zombie.randomChanceRate = 50;
-////            zombie.potionDropRate = 10;
-////            zombie.missChances = 30;
-////            zombie.criticalRate = 10;
-//
-//
-//            enemy witch = new enemy();
-//            witch.Health = 30;
-//            witch.minDps = 20;
-//            witch.maxDps = 50;
-//            witch.exp = 30;
-//            witch.maxSpeed = 35;
-//            witch.minSpeed = 30;
-//            witch.randomChanceRate = 30;
-//            witch.potionDropRate = 30;
-//            witch.missChances = 20;
-//            witch.criticalRate = 5;
-//
-//            enemy mummy = new enemy();
-//            mummy.Health = 100;
-//            mummy.minDps = 10;
-//            mummy.maxDps = 20;
-//            mummy.exp = 45;
-//            mummy.maxSpeed = 20;
-//            mummy.minSpeed = 10;
-//            mummy.randomChanceRate = 30;
-//            mummy.potionDropRate = 30;
-//            mummy.missChances = 20;
-//            mummy.criticalRate = 45;
-//
-//            enemy goblin = new enemy();
-//            goblin.Health = 20;
-//            goblin.minDps = 10;
-//            goblin.maxDps = 30;
-//            goblin.exp = 10;
-//            goblin.maxSpeed = 50;
-//            goblin.minSpeed = 20;
-//            goblin.randomChanceRate = 40;
-//            goblin.potionDropRate = 40;
-//            goblin.missChances = 30;
-//            goblin.criticalRate = 30;
-//
-//
-//            enemy ghost = new enemy();
-//            ghost.Health = 1;
-//            ghost.minDps = 1;
-//            ghost.maxDps = 99;
-//            ghost.maxSpeed = 100;
-//            ghost.minSpeed = 1;
-//            ghost.randomChanceRate = 22;
-//            ghost.potionDropRate = 50;
-//            ghost.missChances = 20;
-//            ghost.criticalRate = 30;
+enemy witch =new enemy("Witch",30,20,50,35,30,30,30,30,20,5);
+
+enemy  mummy = new enemy("Mummy",100,10,20,20,10,45,30,30,20,45);
+
+enemy goblin = new enemy("Goblin",20,10,30,50,20,10,40,40,30,30);
+
+enemy ghost = new enemy("Ghost",100,1,99,100,1,0,22,50,20,30);
+
+
+
 //
 //            enemy randomGuyWithABat = new enemy();
 //            randomGuyWithABat.Health = 80;

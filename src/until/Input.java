@@ -37,7 +37,7 @@ public class Input {
         System.out.println("Please enter a integer.");
         return input.nextInt();
     }
-    double getDouble(double min, double max){
+   public double getDouble(double min, double max){
         System.out.println("Please enter a decimal number between 1.0-10.0");
         double answers= input.nextDouble();
         if (answers > min && answers< max){
@@ -45,7 +45,7 @@ public class Input {
         }
         return getDouble(min, max);
     }
-    double getDouble(){
+   public  double getDouble(){
         System.out.println("Please enter a decimal number.");
         double ans = input.nextDouble();
         return ans;

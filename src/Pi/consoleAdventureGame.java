@@ -3,8 +3,24 @@ package Pi;
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class consoleAdventureGame {
+//    static player warrior = new player("Jeff", );
+    static player tank;
+    static player archer;
+
+
+//    public player[] builds = {warrior,tank,archer};
+
+    //    private static player[] builds;
+//    public static player[] getBuilds(){
+////        return player.bu;
+//    }
     public static void main(String[] args) {
+//        static player warrior = new player();
+//        static player tank = new player();
+//        static player archer = new player();
+
         /////system object
         Scanner in=new Scanner(System.in);
         Random ran = new Random();
@@ -21,7 +37,7 @@ int minAttack = 10;
 
 
         //Pi.player variables
-        int health=100;
+        int  health=100;
         int dps= 50;
         int numberOfPotions=3;
         int healthPotionHeal=20;
@@ -30,7 +46,12 @@ int minAttack = 10;
 
         boolean running= true;
 
-        System.out.println("Welcome to the dungeon.....Now go away!");
+        System.out.println("Welcome to the dungeon.You read a sign that says \"Go away! No adventurer allowed!\"You enter anyways...");
+        System.out.println("What is your name you deviant!");
+        String name= in.nextLine();
+        System.out.printf("Ah so your name is %s that's a stupid name...Anyways what class are you?",name);
+
+
 
         Game:
         while(running){
@@ -40,12 +61,12 @@ int minAttack = 10;
             System.out.println("\t# "+ enemy +" has appeared #\n");
 
 while (enemyHealth > 0){
-    System.out.println("\t Your HP: "+ health);
+    System.out.println("\t" +name+ "'s HP: "+ health);
     System.out.println("\t"+ enemy+ "'s HP: "+ enemyHealth);
-    System.out.println("\n\t What are you going to do?");
-    System.out.println("\tAttack");
-    System.out.println("\tItems");
-    System.out.println("\tRun");
+    System.out.printf("\n\t What are you going to do %s?\n",name);
+    System.out.println("1. \tAttack");
+    System.out.println("2. \tItems");
+    System.out.println("3. \tRun");
 
     String input = in.nextLine();
     if(input.equals("1")){
@@ -62,15 +83,23 @@ while (enemyHealth > 0){
         }
 
         if(health <1){
-            System.out.println("Wow this is awkward...it seems that you lost.....I told you not to come here..");
+            System.out.printf("Wow this is awkward...it seems that you lost.....I told you not to come here %s...\n",name);
             break;
         }
 
     } else if (input.equals("2")) {
+        int damageDealt= ran.nextInt(dps);
+        int damageTaken= ran.nextInt(maxAttack);
+
+
+
         if(numberOfPotions>0){
             health+=healthPotionHeal;
             numberOfPotions--;
             System.out.println("\t> This seems kinda cheap but you've healed for "+ healthPotionHeal+"HP. \n\t You now have "+ health+"HP. The monster looks really disappointed in you..\n\t> You now have "+numberOfPotions +"potions left.");
+            System.out.println("\t The " + enemy + " attacked...");
+            System.out.println("\t> You taken "+damageTaken+" damage.");
+            health-= damageTaken;
         }else{
             System.out.println("Hahaha you're luck ran out. The monster looks gleeful!");
         }
@@ -79,10 +108,15 @@ while (enemyHealth > 0){
         continue Game;
     }else{
         System.out.println("Invalid....can't you read the option....");
+        health-=30;
+        if (health <1){
+            System.out.println("The monsters laugh at you for not reading the sign. You crawl out of the dungeon to disobey another day...");
+            break;
+        }
     }
 }
 if(health<1){
-    System.out.println("The monsters laugh at you for not reading the sign. You crawl out of the dungeon to disobey another day...");
+
     break;
 }
             System.out.println("-----------------------------------------------------");
@@ -104,6 +138,7 @@ if(health<1){
             while(!input.equals("1")&&(!input.equals("2"))){
                 System.out.println("Seriously pay attention");
                 input = in.nextLine();
+
             }
             if (input.equals("1")){
                 System.out.println("I guess you're going to keep going...");
@@ -118,32 +153,8 @@ if(health<1){
 
     }
 
-    public static class person {
-        public String name;
-        public int age;
-        public String occupation;
 
 
-        public String sayHello() {
-            return String.format("Hello, my name is %s, and i'm %d years old. I toil away as a %s. Its a living!", name, age, occupation);
-        }
 
-        public static void main(String[] args) {
-            person ron = new person("ron",42,"truck driver");
-            ron.name = "Ron";
-            ron.age= 42;
-            ron.occupation ="truck driver";
-            System.out.println(ron.sayHello());
-        }
-        public person(String name, int age, String occupation){
-            this.name=name;
-            this.age=age;
-            this.occupation=occupation;
 
-        }
-        public String getName()  {
-            return name;
-        }
-
-    }
 }
