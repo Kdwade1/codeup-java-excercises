@@ -5,24 +5,30 @@ import java.util.Scanner;
 
 
 public class consoleAdventureGame {
-//    static player warrior = new player("Jeff", );
+
     static player tank;
     static player archer;
+static player warrior;
 
 
 
-//    public player[] builds = {warrior,tank,archer};
 
-    //    private static player[] builds;
-//    public static player[] getBuilds(){
-////        return player.bu;
-//    }
+
     public static void main(String[] args) {
-//        static player warrior = new player("The Warrior",150,25,60,10,40,50,3,40);
-//        static player tank = new player("The Tank",200,10,40,5,10,20,2,60);
-//        static player archer = new player("The Archer",125,10,35,15,);
+//        PreBuilds!
+         player warrior = new player("The Warrior",150,25,60,10,40,50,3,40);
+         player tank = new player("The Tank",200,10,40,5,10,20,2,60);
+        player archer = new player("The Archer",125,10,35,15,50,60,4,80);
+        // Enemies
+        enemy zombie = new enemy("Zombie",50,5,20,10,5,30,50,10,30,10);
 
-        enemy zombie= new enemy("Zombie",50,5,20,10,5,30,50,10,30,10);
+        enemy witch =new enemy("Witch",30,20,50,35,30,30,30,30,20,5);
+
+        enemy  mummy = new enemy("Mummy",100,10,20,20,10,45,30,30,20,45);
+
+        enemy goblin = new enemy("Goblin",20,10,30,50,20,10,40,40,30,30);
+
+        enemy ghost = new enemy("Ghost",100,1,99,100,1,0,22,50,20,30);
 
         /////system object
         Scanner in=new Scanner(System.in);

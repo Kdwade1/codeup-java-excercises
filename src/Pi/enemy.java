@@ -29,7 +29,7 @@ String name;
             }
     public static void main(String[] args) {
         // Room one Enemies stats
-enemy zombie= new enemy("Zombie",50,5,20,10,5,30,50,10,30,10);
+enemy zombie = new enemy("Zombie",50,5,20,10,5,30,50,10,30,10);
 
 enemy witch =new enemy("Witch",30,20,50,35,30,30,30,30,20,5);
 
