@@ -39,7 +39,7 @@ public class GradesApplication {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Welcome!\n Here are the GitHub usernames of our student:\n ");
-        //Loop
+//        Loop
         student.forEach((username, students) -> {
 
 //            System.out.println(students.getName());

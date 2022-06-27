@@ -7,7 +7,7 @@ public class Input {
 
     String getString(){
         System.out.println("Enter anything");
- return input.nextLine();
+ return this.input.nextLine();
 
     }
     boolean yesNo() {
@@ -35,8 +35,16 @@ public class Input {
     }
     int getInt(){
         System.out.println("Please enter a integer.");
-        return input.nextInt();
-    }
+ try {
+           return Integer.valueOf(getString());
+
+        }catch(Exception e){
+            e.printStackTrace();
+            return getInt();
+        }
+        }
+
+
    public double getDouble(double min, double max){
         System.out.println("Please enter a decimal number between 1.0-10.0");
         double answers= input.nextDouble();
@@ -47,18 +55,45 @@ public class Input {
     }
    public  double getDouble(){
         System.out.println("Please enter a decimal number.");
-        double ans = input.nextDouble();
-        return ans;
+//        double ans = input.nextDouble();
+       try{
+           return Double.valueOf(getString());
+//           System.out.println("It's a double");
+       }catch(Exception e){
+           e.printStackTrace();
+           return getDouble();
+       }
+//        return 0;
+    }
+   static int getBinary(String binary){
+//        String binaryString = "1010";
+//int decimal = Integer.parseInt(binaryString,2);
+return Integer.parseInt(binary,2);
+   }
+ static int getHex(String hex){
+        try {
+            return Integer.parseInt(hex, 16);
+        }catch(NumberFormatException e){
+            e.printStackTrace();
+            return getHex();
+        }
+ }
+
+    private static int getHex() {
+        return 0;
     }
 
     public static void main(String[] args) {
-        Input in = new Input();
-        System.out.println(in.getDouble());
-        in.getDouble(0.9, 9.9);
-        System.out.println(in.getInt());
-        in.getInt(1,10 );
-        System.out.println(in.yesNo());
-        in.getString();
+//        Input in = new Input();
+//        System.out.println(in.getDouble());
+//        in.getDouble(0.9, 9.9);
+//        in.getString();
+//        System.out.println(in.getInt());
+//        in.getInt(1,10 );
+//        System.out.println(in.yesNo());
+//        in.getString();
+//        System.out.println(getBinary("11111"));
+        System.out.println(getHex("10"));
 
 
     }

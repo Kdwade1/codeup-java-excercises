@@ -23,6 +23,10 @@ public class player {
         this.runChance = runChance;
     }
 
+    public player() {
+
+    }
+
     public static void main(String[] args) {
 //
 //        warrior.health = 150;
