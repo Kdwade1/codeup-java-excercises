@@ -1,5 +1,5 @@
 package shapes;
-import until.Input;
+import util.Input;
 
 public class CircleApp {
     public static void main(String[] args) {

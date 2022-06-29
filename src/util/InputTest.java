@@ -1,6 +1,6 @@
-package until;
+package util;
 
-import static until.Input.getHex;
+import static util.Input.getHex;
 
 public class InputTest {
     public static void main(String[] args) {
