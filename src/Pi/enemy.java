@@ -1,6 +1,6 @@
 package Pi;
 
-public class enemy {
+public class enemy extends consoleAdventureGame {
 String name;
     int Health;
     int minDps;
@@ -27,6 +27,15 @@ String name;
          this.missChances= missChances;
 
             }
+
+    @Override
+    public String toString() {
+        return "enemy{" +
+                "name='" + name + '\'' +
+                ", Health=" + Health +
+                '}';
+    }
+
     public static void main(String[] args) {
         // Room one Enemies stats
 //enemy zombie = new enemy("Zombie",50,5,20,10,5,30,50,10,30,10);

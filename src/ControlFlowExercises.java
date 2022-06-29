@@ -75,11 +75,37 @@ public class ControlFlowExercises {
           System.out.println("This is your number: " + first);
           System.out.println(first * first + ": this is your number squared");
           System.out.println(first * first * first + ": this is your number cubed");
+
+          System.out.println("Do you want to continue another number? (Yes/No)");
+          String choice = scanner.next();
+          if (choice.equalsIgnoreCase("no")) {
+              decision = false;
+          }
       }
-        System.out.println("Do you want to continue another number? (Yes/No)");
-      String choice=scanner.next();
-      if(choice.equalsIgnoreCase("no")){
-          decision=false;
+
+      while(true){
+          System.out.println("Please enter a number between 0-100");
+          int grade = scanner.nextInt();
+          if( grade > 0 && grade <59){
+              System.out.println("Unfortunately you received an F.... Don't give up! ");
+          }
+         else if (grade > 59 && grade<= 66){
+              System.out.println("That's a bit better. Unfortunately, you still received a D... Keep trying!");
+          }
+         else if (grade> 66 && grade <=79){
+              System.out.println("Not bad! You received a C!. With a little more work you could raise a letter grade!");
+          }
+         else if (grade > 79 && grade <= 87){
+              System.out.println("Great job! You received a B! With a little more hard word you could you could get an even higher score");
+          }
+        else  if (grade> 87 && grade <= 100){
+              System.out.println("Outstanding job. You received the highest marks, an A! Keep up the great work!");
+          }
+          System.out.println("Do you want to enter another grade? (Y/N)");
+        String yesOrNo = scanner.next();
+        if(yesOrNo.equals("n")){
+            break;
+        }
       }
         }
         }

@@ -92,7 +92,7 @@ public class consoleAdventureGame {
 //        for (enemy foe : foes) {
 //            System.out.println(foe.toString());
 //        }
-        slowPrint("You come across a mysterious dungeon that you found, coming across your travels.. Before you adventure begins we need to know who exactly are you\n");
+        slowPrint("You come across a mysterious dungeon that you found, coming across your travels.. Before you adventure begins we need to know exactly who you are.\n");
 
 
 
