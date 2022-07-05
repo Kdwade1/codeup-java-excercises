@@ -12,7 +12,7 @@ public class ServerNameGenerator {
     public static void main(String[] args) {
         System.out.println(randomElement(nouns));
         System.out.println(randomElement(adjectives));
-        System.out.println( randomElement(adjectives)+"-"+ randomElement(nouns));
+        System.out.println(randomElement(adjectives) + "-" + randomElement(nouns));
 
     }
 
