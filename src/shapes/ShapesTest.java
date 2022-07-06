@@ -1,6 +1,6 @@
 package shapes;
 
-public class ShapeTest {
+public class ShapesTest {
 
 
 

@@ -1,22 +1,26 @@
 package util;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Input {
     private Scanner input =new Scanner(System.in);
+    private Random scanner;
 
-    String getString(){
+   public String getString(){
         System.out.println("Enter anything");
  return this.input.nextLine();
 
     }
-    boolean yesNo() {
+   public boolean yesNo() {
         System.out.println("Enter yes");
         String[] yes = {"yes", "Ye", "Yep", "Y", "yeah"};
         String reply = input.nextLine();
         for (int i = 0; i < yes.length; i++) {
             if (reply.equalsIgnoreCase(yes[i])) {
                 return true;
+            }else{
+                return false;
             }
             }
         return yesNo();
@@ -44,7 +48,18 @@ public class Input {
         }
         }
 
-
+    public int getIntegerSecret(int min, int max) {
+        int input;
+        do {
+            System.out.println("Enter a number between " + min + " and " + (max - 1) + ".");
+            input = this.scanner.nextInt();
+            if (input < min || input > max) {
+                System.out.println("Input invalid");
+            }
+        } while (input < min || input > max);
+        System.out.println("Input acceptable");
+        return input;
+    }
    public double getDouble(double min, double max){
         System.out.println("Please enter a decimal number between 1.0-10.0");
         double answers= input.nextDouble();
