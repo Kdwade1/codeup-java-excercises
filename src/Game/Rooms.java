@@ -1,4 +1,4 @@
-package Pi;
+package Game;
 
 public class Rooms extends consoleAdventureGame{
 

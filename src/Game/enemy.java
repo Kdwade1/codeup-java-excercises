@@ -1,4 +1,4 @@
-package Pi;
+package Game;
 
 public class enemy extends consoleAdventureGame {
 String name;

@@ -1,4 +1,4 @@
-package Pi;
+package Game;
 
 public class player {
     public String name;
