@@ -19,6 +19,7 @@ public class GamePanel extends JPanel implements ActionListener {
     int appleX;
     int appleY;
     char direction = 'R';
+    char choice;
     boolean running = false;
     Timer timer;
     Random random;
@@ -74,7 +75,8 @@ public class GamePanel extends JPanel implements ActionListener {
             }
 
         } else {
-            gameOver(g);
+            playAgain(g);
+
         }
     }
 
@@ -135,6 +137,18 @@ public class GamePanel extends JPanel implements ActionListener {
 
 
     }
+    public void playAgain(Graphics g){
+        g.setColor(Color.red);
+        g.setFont(new Font("INK FREE", Font.BOLD, 75));
+        FontMetrics metrics3 = getFontMetrics(g.getFont());
+        g.drawString("PLAY AGAIN? Y   N", (screen_Width - metrics3.stringWidth("Play again? Y   N")) / 2, screen_Height / 2);
+
+        if (choice == 'Y') {
+            running = true;
+        }else{
+            gameOver(g);
+        }
+    }
 
     public void gameOver(Graphics g) {
         //score
@@ -147,6 +161,7 @@ public class GamePanel extends JPanel implements ActionListener {
         g.setFont(new Font("INK FREE", Font.BOLD, 75));
         FontMetrics metrics2 = getFontMetrics(g.getFont());
         g.drawString("GAME OVER", (screen_Width - metrics2.stringWidth("GAME OVER")) / 2, screen_Height / 2);
+
 
     }
 
@@ -187,6 +202,7 @@ public class GamePanel extends JPanel implements ActionListener {
                     }
                     break;
             }
+
 
         }
     }
